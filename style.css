@@ -14,6 +14,12 @@ body {
 
 .header__avatar {
  border-radius: 50%;
+ border: 3px solid #f6f8fa;
+}
+
+.header__avatar:hover {
+  border: 3px solid #FF9900;
+  cursor: pointer;
 }
 
 .header__title {
@@ -112,7 +118,8 @@ footer {
 }
 
 .button-link:hover {
-  background-color: #0969da;
+  background-color: #FF9900;
+  cursor: pointer;
   color: #fff;
   box-shadow: 0 1px 0 rgba(27, 31, 36, 0.1);
 }
