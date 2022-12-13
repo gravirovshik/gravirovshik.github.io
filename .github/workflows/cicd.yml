@@ -1,4 +1,4 @@
-name: Линтер и Телеграм
+name: Телеграм
 on:
   push:
     branches:
