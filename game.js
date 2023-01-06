@@ -1,4 +1,4 @@
-let randomLoc = Math.floor(Math.random() * 5);
+let randomLoc = Math.ceil(Math.random() * 5);
 let location1 = randomLoc;
 let location2 = location1 + 1;
 let location3 = location2 + 1;
@@ -9,15 +9,19 @@ let isSunk = false;
 let array = [];
 
 while (isSunk == false) {
-	guess = prompt("Привет! Это мини игра морской бой :) Представь, что в 7 ячейках по горизонтали ••••••• (от нуля до шести) расположен 3-ёх палубный корабль врага. Твоя задача потопить его за меньшее кол-во попыток. Стреляй! (введи число 0-6):");
-	if (guess < 0 || guess > 6) {
-		alert("Введи значение от 0 до 6");
+	guess = prompt("Это мини игра морской бой. В 7 ячейках по горизонтали ******* расположен 3-х палубный корабль. Твоя задача - потопить его за меньшее количествово попыток. Стреляй! (введи число 1 - 7) :");
+	
+	let t = typeof(guess);
+	alert("Ты ввел:" + guess + "Тип" + t);
+	
+	if (guess < 1 || guess > 7) {
+		alert("Введи значение от 1 до 7");
 	} else {
 		guesses = guesses + 1;
 		if (array.indexOf(guess) == -1) {
 			if (guess == location1 || guess == location2 || guess == location3) {
 				array.push(guess);
-				alert("Попал");
+				alert("Есть попадание!");
 				hits = hits + 1;
 				if (hits == 3) {
 				isSunk = true;
@@ -27,7 +31,7 @@ while (isSunk == false) {
 				alert("Мимо");
 			}
 		} else {
-			alert("Уже сюда стрелял");
+			alert("Ага, фиг тебе))");
 		}
 	}
 }
