@@ -11,10 +11,10 @@ let array = [];
 while (isSunk == false) {
 	guess = prompt("Это мини игра морской бой. В 7 ячейках по горизонтали ******* расположен 3-х палубный корабль. Твоя задача - потопить его за меньшее количествово попыток. Стреляй! (введи число 1 - 7) :");
 	
-	let t = typeof(guess);
-	alert("Ты ввел:" + guess + "Тип" + t);
-	
-	if (guess < 1 || guess > 7) {
+	if(Number.isNaN(Number(guess))) {
+		alert('Это строка');}
+
+	else if (guess < 1 || guess > 7) {
 		alert("Введи значение от 1 до 7");
 	} else {
 		guesses = guesses + 1;
